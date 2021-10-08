@@ -52,6 +52,11 @@ public class TrimmerManager extends ReactContextBaseJavaModule {
     return REACT_PACKAGE;
   }
 
+  @Override    
+  public boolean canOverrideExistingModule() {        
+    return true;    
+  } 
+  
   @ReactMethod
   public void getPreviewImages(String path, Promise promise) {
     Log.d(REACT_PACKAGE, "getPreviewImages: " + path);
